@@ -21,6 +21,11 @@
 		3C01F4C820F4A9E60082F7D6 /* ZXSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01F4C720F4A9E60082F7D6 /* ZXSectionModel.m */; };
 		3C01F4CB20F4AA010082F7D6 /* ZXItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01F4CA20F4AA010082F7D6 /* ZXItemModel.m */; };
 		3C01F4D220F4B4800082F7D6 /* ZXCustomTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01F4D120F4B4800082F7D6 /* ZXCustomTableViewController.m */; };
+		3C01F4D920F5CF880082F7D6 /* ZXCustomTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01F4D820F5CF880082F7D6 /* ZXCustomTabBarController.m */; };
+		3C01F4DC20F5CFCC0082F7D6 /* ZXBasicTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01F4DB20F5CFCC0082F7D6 /* ZXBasicTabBarController.m */; };
+		3C01F4E220F5D9B80082F7D6 /* ZXOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01F4E120F5D9B80082F7D6 /* ZXOneViewController.m */; };
+		3C01F4E520F5D9C30082F7D6 /* ZXTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01F4E420F5D9C30082F7D6 /* ZXTwoViewController.m */; };
+		3C01F4E820F5E02C0082F7D6 /* ZXCustomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01F4E720F5E02C0082F7D6 /* ZXCustomTabBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +53,18 @@
 		3C01F4CA20F4AA010082F7D6 /* ZXItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXItemModel.m; sourceTree = "<group>"; };
 		3C01F4D020F4B4800082F7D6 /* ZXCustomTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXCustomTableViewController.h; sourceTree = "<group>"; };
 		3C01F4D120F4B4800082F7D6 /* ZXCustomTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXCustomTableViewController.m; sourceTree = "<group>"; };
+		3C01F4D720F5CF880082F7D6 /* ZXCustomTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXCustomTabBarController.h; sourceTree = "<group>"; };
+		3C01F4D820F5CF880082F7D6 /* ZXCustomTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXCustomTabBarController.m; sourceTree = "<group>"; };
+		3C01F4DA20F5CFCC0082F7D6 /* ZXBasicTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXBasicTabBarController.h; sourceTree = "<group>"; };
+		3C01F4DB20F5CFCC0082F7D6 /* ZXBasicTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXBasicTabBarController.m; sourceTree = "<group>"; };
+		3C01F4DE20F5D3100082F7D6 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		3C01F4DF20F5D44D0082F7D6 /* Define.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
+		3C01F4E020F5D9B80082F7D6 /* ZXOneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXOneViewController.h; sourceTree = "<group>"; };
+		3C01F4E120F5D9B80082F7D6 /* ZXOneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXOneViewController.m; sourceTree = "<group>"; };
+		3C01F4E320F5D9C30082F7D6 /* ZXTwoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXTwoViewController.h; sourceTree = "<group>"; };
+		3C01F4E420F5D9C30082F7D6 /* ZXTwoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXTwoViewController.m; sourceTree = "<group>"; };
+		3C01F4E620F5E02C0082F7D6 /* ZXCustomTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXCustomTabBar.h; sourceTree = "<group>"; };
+		3C01F4E720F5E02C0082F7D6 /* ZXCustomTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXCustomTabBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +97,7 @@
 		3C01F48A20F4984B0082F7D6 /* ZXDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3C01F4DD20F5D2E30082F7D6 /* Config */,
 				3C01F4A120F499DC0082F7D6 /* AppDelegate */,
 				3C01F4B520F49AD50082F7D6 /* Basic */,
 				3C01F4A520F49A040082F7D6 /* Main */,
@@ -101,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				3C01F4A620F49A040082F7D6 /* Home */,
+				3C01F4D320F5CDD00082F7D6 /* CustomTabarVC */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -174,6 +193,8 @@
 				3C01F4BB20F49B080082F7D6 /* ZXBasicTableViewController.m */,
 				3C01F4BD20F49B340082F7D6 /* ZXBasicNavigationController.h */,
 				3C01F4BE20F49B340082F7D6 /* ZXBasicNavigationController.m */,
+				3C01F4DA20F5CFCC0082F7D6 /* ZXBasicTabBarController.h */,
+				3C01F4DB20F5CFCC0082F7D6 /* ZXBasicTabBarController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -209,6 +230,54 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		3C01F4D320F5CDD00082F7D6 /* CustomTabarVC */ = {
+			isa = PBXGroup;
+			children = (
+				3C01F4D420F5CDD00082F7D6 /* Controller */,
+				3C01F4D520F5CDD00082F7D6 /* Model */,
+				3C01F4D620F5CDD00082F7D6 /* View */,
+			);
+			path = CustomTabarVC;
+			sourceTree = "<group>";
+		};
+		3C01F4D420F5CDD00082F7D6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3C01F4D720F5CF880082F7D6 /* ZXCustomTabBarController.h */,
+				3C01F4D820F5CF880082F7D6 /* ZXCustomTabBarController.m */,
+				3C01F4E020F5D9B80082F7D6 /* ZXOneViewController.h */,
+				3C01F4E120F5D9B80082F7D6 /* ZXOneViewController.m */,
+				3C01F4E320F5D9C30082F7D6 /* ZXTwoViewController.h */,
+				3C01F4E420F5D9C30082F7D6 /* ZXTwoViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3C01F4D520F5CDD00082F7D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3C01F4D620F5CDD00082F7D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3C01F4E620F5E02C0082F7D6 /* ZXCustomTabBar.h */,
+				3C01F4E720F5E02C0082F7D6 /* ZXCustomTabBar.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3C01F4DD20F5D2E30082F7D6 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				3C01F4DE20F5D3100082F7D6 /* PrefixHeader.pch */,
+				3C01F4DF20F5D44D0082F7D6 /* Define.h */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,10 +357,15 @@
 				3C01F4B920F49AED0082F7D6 /* ZXBasicViewController.m in Sources */,
 				3C01F4CB20F4AA010082F7D6 /* ZXItemModel.m in Sources */,
 				3C01F4C820F4A9E60082F7D6 /* ZXSectionModel.m in Sources */,
+				3C01F4E220F5D9B80082F7D6 /* ZXOneViewController.m in Sources */,
 				3C01F4BC20F49B080082F7D6 /* ZXBasicTableViewController.m in Sources */,
 				3C01F4C520F49FBF0082F7D6 /* ZXHomeCollectionViewCell.m in Sources */,
+				3C01F4DC20F5CFCC0082F7D6 /* ZXBasicTabBarController.m in Sources */,
 				3C01F4BF20F49B340082F7D6 /* ZXBasicNavigationController.m in Sources */,
+				3C01F4E820F5E02C0082F7D6 /* ZXCustomTabBar.m in Sources */,
+				3C01F4E520F5D9C30082F7D6 /* ZXTwoViewController.m in Sources */,
 				3C01F4C220F49BC60082F7D6 /* ZXHomeViewController.m in Sources */,
+				3C01F4D920F5CF880082F7D6 /* ZXCustomTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +507,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JNF86A6DCM;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ZXDemo/Config/PrefixHeader.pch";
 				INFOPLIST_FILE = ZXDemo/Resource/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,6 +526,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JNF86A6DCM;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ZXDemo/Config/PrefixHeader.pch";
 				INFOPLIST_FILE = ZXDemo/Resource/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
