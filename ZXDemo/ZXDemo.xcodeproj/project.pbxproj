@@ -21,7 +21,7 @@
 		3C01F4C820F4A9E60082F7D6 /* ZXSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01F4C720F4A9E60082F7D6 /* ZXSectionModel.m */; };
 		3C01F4CB20F4AA010082F7D6 /* ZXItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01F4CA20F4AA010082F7D6 /* ZXItemModel.m */; };
 		3C01F4D220F4B4800082F7D6 /* ZXCustomTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01F4D120F4B4800082F7D6 /* ZXCustomTableViewController.m */; };
-		3C01F4D920F5CF880082F7D6 /* ZXCustomTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01F4D820F5CF880082F7D6 /* ZXCustomTabBarController.m */; };
+		3C01F4D920F5CF880082F7D6 /* ZXCustomTaBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01F4D820F5CF880082F7D6 /* ZXCustomTaBarController.m */; };
 		3C01F4DC20F5CFCC0082F7D6 /* ZXBasicTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01F4DB20F5CFCC0082F7D6 /* ZXBasicTabBarController.m */; };
 		3C01F4E220F5D9B80082F7D6 /* ZXOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01F4E120F5D9B80082F7D6 /* ZXOneViewController.m */; };
 		3C01F4E520F5D9C30082F7D6 /* ZXTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01F4E420F5D9C30082F7D6 /* ZXTwoViewController.m */; };
@@ -53,8 +53,8 @@
 		3C01F4CA20F4AA010082F7D6 /* ZXItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXItemModel.m; sourceTree = "<group>"; };
 		3C01F4D020F4B4800082F7D6 /* ZXCustomTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXCustomTableViewController.h; sourceTree = "<group>"; };
 		3C01F4D120F4B4800082F7D6 /* ZXCustomTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXCustomTableViewController.m; sourceTree = "<group>"; };
-		3C01F4D720F5CF880082F7D6 /* ZXCustomTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXCustomTabBarController.h; sourceTree = "<group>"; };
-		3C01F4D820F5CF880082F7D6 /* ZXCustomTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXCustomTabBarController.m; sourceTree = "<group>"; };
+		3C01F4D720F5CF880082F7D6 /* ZXCustomTaBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXCustomTaBarController.h; sourceTree = "<group>"; };
+		3C01F4D820F5CF880082F7D6 /* ZXCustomTaBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXCustomTaBarController.m; sourceTree = "<group>"; };
 		3C01F4DA20F5CFCC0082F7D6 /* ZXBasicTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXBasicTabBarController.h; sourceTree = "<group>"; };
 		3C01F4DB20F5CFCC0082F7D6 /* ZXBasicTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXBasicTabBarController.m; sourceTree = "<group>"; };
 		3C01F4DE20F5D3100082F7D6 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -245,8 +245,8 @@
 		3C01F4D420F5CDD00082F7D6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				3C01F4D720F5CF880082F7D6 /* ZXCustomTabBarController.h */,
-				3C01F4D820F5CF880082F7D6 /* ZXCustomTabBarController.m */,
+				3C01F4D720F5CF880082F7D6 /* ZXCustomTaBarController.h */,
+				3C01F4D820F5CF880082F7D6 /* ZXCustomTaBarController.m */,
 				3C01F4E020F5D9B80082F7D6 /* ZXOneViewController.h */,
 				3C01F4E120F5D9B80082F7D6 /* ZXOneViewController.m */,
 				3C01F4E320F5D9C30082F7D6 /* ZXTwoViewController.h */,
@@ -365,7 +365,7 @@
 				3C01F4E820F5E02C0082F7D6 /* ZXCustomTabBar.m in Sources */,
 				3C01F4E520F5D9C30082F7D6 /* ZXTwoViewController.m in Sources */,
 				3C01F4C220F49BC60082F7D6 /* ZXHomeViewController.m in Sources */,
-				3C01F4D920F5CF880082F7D6 /* ZXCustomTabBarController.m in Sources */,
+				3C01F4D920F5CF880082F7D6 /* ZXCustomTaBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

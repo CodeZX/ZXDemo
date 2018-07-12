@@ -80,7 +80,7 @@ static NSString  * const cellIdentifier = @"HomeCollectionViewCell";
        
         ZXSectionModel *sectionModel1 = [[ZXSectionModel alloc]initWithTitle:@"UI" ItemArray:@[
                                                                                             
-        [[ZXItemModel alloc]initWithTitle:@"自定义TabarVC" TargetClase:@"ZXCustomTableViewController"],
+        [[ZXItemModel alloc]initWithTitle:@"自定义TabarVC" TargetClase:@"ZXCustomTaBarController"],
                                                                                                       
       ]];
         

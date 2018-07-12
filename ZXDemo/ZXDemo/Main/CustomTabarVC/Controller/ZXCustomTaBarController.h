@@ -8,6 +8,6 @@
 
 #import "ZXBasicTabBarController.h"
 
-@interface ZXCustomTabBarController : ZXBasicTabBarController
+@interface ZXCustomTaBarController : ZXBasicTabBarController
 
 @end
