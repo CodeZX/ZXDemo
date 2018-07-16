@@ -92,12 +92,12 @@
 /**导航条高度*/
 #define SIZE_NAVBAR_HEIGHT 44
 /** tabBar高度*/
-#define SIZE_TABBAR_HEIGHT   49
+#define SIZE_TABAR_HEIGHT   49
 /** 导航条整体高度 */
-#define NavgationBar_Height 64
+#define SIZE_NAVBAR_STATUSBAR_HEIGHT iPhoneX? 88:64
 
 //适配iPhone x 底栏高度
-//#define Tabbar_Height     ([[UIApplication sharedApplication] statusBarFrame].size.height>20?83:49)
+//#define TABAR_HEIGHT     (iPhoneX?83:49)
 #define VoiceSearchHeight 150
 
 
