@@ -15,5 +15,6 @@
 @required
 @end
 @interface ZXCustomTabBar : UITabBar
+@property (nonatomic, strong) UIButton *centerBtn;
 @property (nonatomic,weak) id<ZXCustomTabBarDelegate> customDelegate;
 @end

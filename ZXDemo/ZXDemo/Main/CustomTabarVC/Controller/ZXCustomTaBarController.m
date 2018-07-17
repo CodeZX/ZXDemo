@@ -40,6 +40,15 @@
     [self setValue:self.customTabar forKey:@"tabBar"];
     
     [self addAllChildViewController];
+    
+    
+}
+
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+  
+  
 }
 
 
@@ -81,45 +90,85 @@
 //        [alertController addAction:action];
 //    [self presentViewController:alertController animated:YES completion:nil];
     
-    UIWindow *window = [UIApplication sharedApplication].keyWindow;
-    CGRect position = [self.tabBar convertRect:centreButton.frame toView:window];
-    CGPoint center = CGPointMake(CGRectGetMidX(position), CGRectGetMidY(position));
-    CGFloat W = 44;
-    CGFloat H = 44;
-    CGFloat X = center.x - W/2;
-    CGFloat Y = center.y - H/2;
-    
+
+    if (_noteButton && _avdioButton && _videoButton) {
+        
+        [self unfoldAllOptions];
+    }else {
+        
+        UIWindow *window = [UIApplication sharedApplication].keyWindow;
+        CGRect position = [self.tabBar convertRect:centreButton.frame toView:window];
+        CGPoint center = CGPointMake(CGRectGetMidX(position), CGRectGetMidY(position));
+        CGFloat W = 44;
+        CGFloat H = 44;
+        CGFloat X = center.x - W/2;
+        CGFloat Y = center.y - H/2;
+        
+        
+        self.noteButton.frame = CGRectMake(X, Y, W, H);
+        [window addSubview:self.noteButton];
+        self.avdioButton.frame = CGRectMake(X, Y, W, H);
+        [window addSubview:self.avdioButton];
+        self.videoButton.frame = CGRectMake(X, Y, W, H);
+        [window addSubview:self.videoButton];
+        [self unfoldAllOptions];
+        
+    }
    
-    self.noteButton.frame = CGRectMake(X, Y, W, H);
-    [window addSubview:self.noteButton];
-    self.avdioButton.frame = CGRectMake(X, Y, W, H);
-    [window addSubview:self.avdioButton];
-    self.videoButton.frame = CGRectMake(X, Y, W, H);
-    [window addSubview:self.videoButton];
+   
+    
+
+}
+
+- (void)unfoldAllOptions {
     
     
-    [UIView animateWithDuration:.5 animations:^{
-        self.noteButton.alpha = 1;
-        self.noteButton.frame = CGRectMake(X - 100, Y - 100, W, H);
-    }];
+    [self unfoldOptionWithRadius:100 Angle:45.0 Delay:0 target:self.noteButton];
+    [self unfoldOptionWithRadius:100 Angle:90.0 Delay:.2 target:self.avdioButton];
+    [self unfoldOptionWithRadius:100 Angle:135.0 Delay:.2 target:self.videoButton];
+}
+
+
+- (void)foldAllOptions {
     
     
-    [UIView animateWithDuration:.5 delay:.3 options:UIViewAnimationOptionCurveEaseIn animations:^{
-        self.avdioButton.alpha = 1;
-        self.avdioButton.frame = CGRectMake(X, Y - 100, W, H);
-    } completion:^(BOOL finished) {
+}
+
+- (void)unfoldOptionWithRadius:(CGFloat)radius Angle:(CGFloat)angle Delay:(CGFloat)delay target:(UIView *)target {
+    
+    CGFloat centerX = target.center.x;
+    CGFloat centerY = target.center.y;
+    CGFloat W = target.frame.size.width;
+    CGFloat H = target.frame.size.height;
+    CGFloat locationX = sin(angle) * radius;
+    CGFloat locationY = cos(angle) * radius;
+    
+    CGFloat toCenterX = 0;
+    CGFloat toCenterY = 0;
+    if (angle < 90.0) {
+        toCenterX = centerX - locationX ;
+        toCenterY = centerY - locationY ;
+    }else if(angle == 90.0) {
+        toCenterX = centerX;
+        toCenterY = centerY - radius;
+    }else if(angle > 90.0 ) {
+        toCenterX = centerX + sin(angle - 90) * radius;;
+        toCenterY = centerY - cos(angle - 90) * radius;
         
-    }];
+    }
+   
     
     
-    [UIView animateWithDuration:.5 delay:.5 options:UIViewAnimationOptionCurveEaseIn animations:^{
-        self.videoButton.alpha = 1;
-        self.videoButton.frame = CGRectMake(X + 100, Y - 100, W, H);
-    } completion:^(BOOL finished) {
-        
-    }];
+    [UIView animateWithDuration:.6 delay: delay + .2 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        target.alpha = 1;
+    } completion:^(BOOL finished) {}];
     
-    UIView animateKeyframesWithDuration:<#(NSTimeInterval)#> delay:<#(NSTimeInterval)#> options:<#(UIViewKeyframeAnimationOptions)#> animations:<#^(void)animations#> completion:<#^(BOOL finished)completion#>
+    [UIView animateWithDuration:.6 delay:delay usingSpringWithDamping:.9 initialSpringVelocity:30 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        target.center = CGPointMake(toCenterX, toCenterY);
+    } completion:^(BOOL finished) {}];
+    
+    
+    
     
 }
 
@@ -129,7 +178,9 @@
     if (!_noteButton) {
         _noteButton = [[UIButton alloc]init];
         _noteButton.backgroundColor = RandomColor;
-        _avdioButton.alpha = 0;
+        _noteButton.alpha = 0;
+        _noteButton.layer.cornerRadius = 22;
+        _noteButton.layer.masksToBounds = YES;
         
     }
     return _noteButton;
@@ -141,6 +192,8 @@
         _avdioButton = [[UIButton alloc]init];
         _avdioButton.backgroundColor = RandomColor;
         _avdioButton.alpha = 0;
+        _avdioButton.layer.cornerRadius = 22;
+        _avdioButton.layer.masksToBounds = YES;
     }
     return _avdioButton;
 }
@@ -151,6 +204,8 @@
         _videoButton = [[UIButton alloc]init];
         _videoButton.backgroundColor = RandomColor;
         _videoButton.alpha = 0;
+        _videoButton.layer.cornerRadius = 22;
+        _videoButton.layer.masksToBounds = YES;
     }
     return _videoButton;
 }

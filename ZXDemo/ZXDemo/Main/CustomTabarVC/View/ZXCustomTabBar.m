@@ -11,7 +11,7 @@
 
 @interface ZXCustomTabBar ()
 
-@property (nonatomic, strong) UIButton *centerBtn;
+
 @end
 
 @implementation ZXCustomTabBar
