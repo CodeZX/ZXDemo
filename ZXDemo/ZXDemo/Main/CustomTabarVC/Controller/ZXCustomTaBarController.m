@@ -131,6 +131,9 @@
 
 - (void)foldAllOptions {
     
+    [self unfoldOptionWithRadius:100 Angle:45.0 Delay:0 target:self.noteButton];
+    [self unfoldOptionWithRadius:100 Angle:90.0 Delay:.2 target:self.avdioButton];
+    [self unfoldOptionWithRadius:100 Angle:135.0 Delay:.2 target:self.videoButton];
     
 }
 
