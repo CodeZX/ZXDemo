@@ -115,7 +115,7 @@
         CGFloat H = 44;
         CGFloat X = center.x - W/2;
         CGFloat Y = center.y - H/2;
-        self.centerButtonPoint = CGPointMake(X, Y);
+        self.centerButtonPoint = center;
         
         self.noteButton.frame = CGRectMake(X, Y, W, H);
         [window addSubview:self.noteButton];
@@ -135,17 +135,19 @@
 - (void)unfoldAllOptions {
     
     
-    [self unfoldOptionWithRadius:120 Angle:45.0 Delay:.2 target:self.noteButton];
-    [self unfoldOptionWithRadius:120 Angle:90.0 Delay:.3 target:self.avdioButton];
-    [self unfoldOptionWithRadius:120 Angle:135.0 Delay:.4 target:self.videoButton];
+    [self unfoldOptionWithRadius:120 Angle:45.0 Delay:.1 target:self.noteButton];
+    [self unfoldOptionWithRadius:120 Angle:90.0 Delay:.2 target:self.avdioButton];
+    [self unfoldOptionWithRadius:120 Angle:135.0 Delay:.3 target:self.videoButton];
 }
 
 
 - (void)foldAllOptions {
     
-    [self foldOptionWithRadius:120 Angle:45.0 Delay:.1 target:self.noteButton];
+    [self foldOptionWithRadius:120 Angle:135.0 Delay:.1 target:self.videoButton];
     [self foldOptionWithRadius:120 Angle:90.0 Delay:.2 target:self.avdioButton];
-    [self foldOptionWithRadius:120 Angle:135.0 Delay:.3 target:self.videoButton];
+    [self foldOptionWithRadius:120 Angle:45.0 Delay:.3 target:self.noteButton];
+    
+   
     
 }
 
@@ -173,13 +175,15 @@
     }
    
     
-    [UIView animateWithDuration:.6 delay: .05 options:UIViewAnimationOptionCurveEaseIn animations:^{
-        target.alpha = 1;
-    } completion:^(BOOL finished) {}];
-    
     [UIView animateWithDuration:.6 delay:delay usingSpringWithDamping:.9 initialSpringVelocity:30 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         target.center = CGPointMake(toCenterX, toCenterY);
     } completion:^(BOOL finished) {}];
+    
+    [UIView animateWithDuration:.05 delay: delay options:UIViewAnimationOptionCurveEaseIn animations:^{
+        target.alpha = 1;
+    } completion:^(BOOL finished) {}];
+    
+    
     
 }
 
@@ -189,12 +193,16 @@
     CGFloat toCenterX = self.centerButtonPoint.x;
     CGFloat toCenterY = self.centerButtonPoint.y;
     
-    [UIView animateWithDuration:.6 delay: delay options:UIViewAnimationOptionCurveEaseIn animations:^{
-        target.alpha = 0;
-    } completion:^(BOOL finished) {}];
+    
+    
     [UIView animateWithDuration:.6 delay:delay usingSpringWithDamping:.9 initialSpringVelocity:30 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         target.center = CGPointMake(toCenterX, toCenterY);
     } completion:^(BOOL finished) {}];
+    
+    [UIView animateWithDuration:.03 delay: delay options:UIViewAnimationOptionCurveEaseIn animations:^{
+        target.alpha = 0;
+    } completion:^(BOOL finished) {}];
+    
     
 }
 
