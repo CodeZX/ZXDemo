@@ -83,6 +83,7 @@
 //
 //    [tabBarController.selectedViewController presentViewController:alertController animated:YES completion:nil];
     if ([self.customDelegate respondsToSelector:@selector(customTabBar:didClickForCentreButton:)]) {
+        sender.selected  = !sender.selected;
         [self.customDelegate customTabBar:self didClickForCentreButton:sender];
     }
 }

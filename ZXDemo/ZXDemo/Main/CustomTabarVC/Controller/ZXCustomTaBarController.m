@@ -9,6 +9,7 @@
 #import "ZXCustomTaBarController.h"
 #import "ZXOneViewController.h"
 #import "ZXTwoViewController.h"
+
 #import "ZXCustomTabBar.h"
 
 @interface ZXCustomTaBarController ()<ZXCustomTabBarDelegate>
@@ -20,6 +21,8 @@
 @property (nonatomic,strong) UIButton *noteButton;
 @property (nonatomic,strong) UIButton *avdioButton;
 @property (nonatomic,strong) UIButton *videoButton;
+
+@property (nonatomic,assign) CGPoint centerButtonPoint;
 @end
 
 @implementation ZXCustomTaBarController
@@ -34,7 +37,7 @@
 
 - (void)setupUI {
     
-    // 利用KVO来使用自定义的tabBar
+    // 利用KVC来使用自定义的tabBar
     self.customTabar = [[ZXCustomTabBar alloc] init];
     self.customTabar.customDelegate = self;
     [self setValue:self.customTabar forKey:@"tabBar"];
@@ -93,17 +96,26 @@
 
     if (_noteButton && _avdioButton && _videoButton) {
         
-        [self unfoldAllOptions];
+        if (centreButton.selected) {
+            
+            [self unfoldAllOptions];
+        
+        }else {
+            
+            [self foldAllOptions];
+        }
+        
+    
     }else {
         
         UIWindow *window = [UIApplication sharedApplication].keyWindow;
-        CGRect position = [self.tabBar convertRect:centreButton.frame toView:window];
+        CGRect position = [self.customTabar convertRect:centreButton.frame toView:window];
         CGPoint center = CGPointMake(CGRectGetMidX(position), CGRectGetMidY(position));
         CGFloat W = 44;
         CGFloat H = 44;
         CGFloat X = center.x - W/2;
         CGFloat Y = center.y - H/2;
-        
+        self.centerButtonPoint = CGPointMake(X, Y);
         
         self.noteButton.frame = CGRectMake(X, Y, W, H);
         [window addSubview:self.noteButton];
@@ -123,17 +135,17 @@
 - (void)unfoldAllOptions {
     
     
-    [self unfoldOptionWithRadius:100 Angle:45.0 Delay:0 target:self.noteButton];
-    [self unfoldOptionWithRadius:100 Angle:90.0 Delay:.2 target:self.avdioButton];
-    [self unfoldOptionWithRadius:100 Angle:135.0 Delay:.2 target:self.videoButton];
+    [self unfoldOptionWithRadius:120 Angle:45.0 Delay:.2 target:self.noteButton];
+    [self unfoldOptionWithRadius:120 Angle:90.0 Delay:.3 target:self.avdioButton];
+    [self unfoldOptionWithRadius:120 Angle:135.0 Delay:.4 target:self.videoButton];
 }
 
 
 - (void)foldAllOptions {
     
-    [self unfoldOptionWithRadius:100 Angle:45.0 Delay:0 target:self.noteButton];
-    [self unfoldOptionWithRadius:100 Angle:90.0 Delay:.2 target:self.avdioButton];
-    [self unfoldOptionWithRadius:100 Angle:135.0 Delay:.2 target:self.videoButton];
+    [self foldOptionWithRadius:120 Angle:45.0 Delay:.1 target:self.noteButton];
+    [self foldOptionWithRadius:120 Angle:90.0 Delay:.2 target:self.avdioButton];
+    [self foldOptionWithRadius:120 Angle:135.0 Delay:.3 target:self.videoButton];
     
 }
 
@@ -161,19 +173,31 @@
     }
    
     
-    
-    [UIView animateWithDuration:.6 delay: delay + .2 options:UIViewAnimationOptionCurveEaseIn animations:^{
+    [UIView animateWithDuration:.6 delay: .05 options:UIViewAnimationOptionCurveEaseIn animations:^{
         target.alpha = 1;
     } completion:^(BOOL finished) {}];
     
-    [UIView animateWithDuration:.6 delay:delay usingSpringWithDamping:.9 initialSpringVelocity:30 options:UIViewAnimationOptionCurveEaseIn animations:^{
+    [UIView animateWithDuration:.6 delay:delay usingSpringWithDamping:.9 initialSpringVelocity:30 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         target.center = CGPointMake(toCenterX, toCenterY);
     } completion:^(BOOL finished) {}];
     
+}
+
+
+- (void)foldOptionWithRadius:(CGFloat)radius Angle:(CGFloat)angle Delay:(CGFloat)delay target:(UIView *)target {
     
+    CGFloat toCenterX = self.centerButtonPoint.x;
+    CGFloat toCenterY = self.centerButtonPoint.y;
     
+    [UIView animateWithDuration:.6 delay: delay options:UIViewAnimationOptionCurveEaseIn animations:^{
+        target.alpha = 0;
+    } completion:^(BOOL finished) {}];
+    [UIView animateWithDuration:.6 delay:delay usingSpringWithDamping:.9 initialSpringVelocity:30 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        target.center = CGPointMake(toCenterX, toCenterY);
+    } completion:^(BOOL finished) {}];
     
 }
+
 
 #pragma mark -------------------------- lazy load ----------------------------------------
 - (UIButton *)noteButton {
