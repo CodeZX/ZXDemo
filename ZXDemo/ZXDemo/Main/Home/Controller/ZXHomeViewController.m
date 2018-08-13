@@ -51,7 +51,8 @@ static NSString  * const cellIdentifier = @"HomeCollectionViewCell";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
-    return 1;
+    ZXSectionModel *sectionModel = self.sectionArray[section];
+    return sectionModel.itemArray.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -81,6 +82,8 @@ static NSString  * const cellIdentifier = @"HomeCollectionViewCell";
         ZXSectionModel *sectionModel1 = [[ZXSectionModel alloc]initWithTitle:@"UI" ItemArray:@[
                                                                                             
         [[ZXItemModel alloc]initWithTitle:@"自定义TabarVC" TargetClase:@"ZXCustomTaBarController"],
+        
+        [[ZXItemModel alloc]initWithTitle:@"ZFPlayer" TargetClase:@"PlayerViewController"]
                                                                                                       
       ]];
         
