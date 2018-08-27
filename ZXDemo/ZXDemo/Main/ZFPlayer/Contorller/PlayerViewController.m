@@ -13,6 +13,8 @@
 #import <ZFPlayer/ZFPlayerControlView.h>
 
 
+#import <AVFoundation/AVFoundation.h>
+
 @interface PlayerViewController ()
 @property (nonatomic,strong) ZFPlayerController *player;
 
@@ -32,6 +34,10 @@
     self.player.controlView = [[ZFPlayerControlView alloc]init];
     self.player.assetURL = [NSURL URLWithString:@"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"];
     
+    
+    AVPlayer *player = [[AVPlayer alloc]init];
+    player.rate = 1.5;
+    AVAudioPlayer *audio = [[AVAudioPlayer alloc]init];
     
 }
 
