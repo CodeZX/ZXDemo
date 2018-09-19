@@ -30,8 +30,62 @@
 		3C100984212AE59700940BFD /* LXCameraManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C10097F212AE59700940BFD /* LXCameraManager.m */; };
 		3C100985212AE59700940BFD /* LXCameraControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C100980212AE59700940BFD /* LXCameraControlView.m */; };
 		3C100989212AE68C00940BFD /* ZXCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C100988212AE68C00940BFD /* ZXCameraViewController.m */; };
+		3C1631852137ED28006BC00C /* LXCameraFilterSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1631842137ED28006BC00C /* LXCameraFilterSelectView.m */; };
+		3C1631882137F0AE006BC00C /* LXCameraFilterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1631872137F0AE006BC00C /* LXCameraFilterModel.m */; };
+		3C16318B2137F332006BC00C /* LXCameraFilterSelcectViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C16318A2137F332006BC00C /* LXCameraFilterSelcectViewCell.m */; };
+		3C16318D21381DE8006BC00C /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C16318C21381DE7006BC00C /* logo.jpg */; };
+		3CAD83C0214CF3C4004023E1 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD83BF214CF3C4004023E1 /* UIImage+Extension.m */; };
+		3CAD83C3214E4262004023E1 /* LXCalculagraphLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD83C2214E4262004023E1 /* LXCalculagraphLabel.m */; };
+		3CAD83FE2150FB54004023E1 /* ZXPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD83FD2150FB54004023E1 /* ZXPageViewController.m */; };
+		3CD7A637214220E9007C4500 /* icon_face@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A613214220E8007C4500 /* icon_face@3x.png */; };
+		3CD7A638214220E9007C4500 /* icon_more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A614214220E8007C4500 /* icon_more@2x.png */; };
+		3CD7A639214220E9007C4500 /* icon_image@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A615214220E8007C4500 /* icon_image@3x.png */; };
+		3CD7A63A214220E9007C4500 /* 前后摄像头转换-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A616214220E8007C4500 /* 前后摄像头转换-2.png */; };
+		3CD7A63B214220E9007C4500 /* icon_more.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A617214220E8007C4500 /* icon_more.png */; };
+		3CD7A63C214220E9007C4500 /* icon_convert@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A618214220E8007C4500 /* icon_convert@2x.png */; };
+		3CD7A63D214220E9007C4500 /* icon_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A619214220E8007C4500 /* icon_close.png */; };
+		3CD7A63E214220E9007C4500 /* button_shot_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A61A214220E8007C4500 /* button_shot_nor@2x.png */; };
+		3CD7A63F214220E9007C4500 /* Shape@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A61B214220E8007C4500 /* Shape@3x.png */; };
+		3CD7A640214220E9007C4500 /* icon_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A61C214220E8007C4500 /* icon_image.png */; };
+		3CD7A641214220E9007C4500 /* icon_slider@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A61D214220E8007C4500 /* icon_slider@2x.png */; };
+		3CD7A642214220E9007C4500 /* icon_slider@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A61E214220E8007C4500 /* icon_slider@3x.png */; };
+		3CD7A643214220E9007C4500 /* Shape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A61F214220E8007C4500 /* Shape@2x.png */; };
+		3CD7A644214220E9007C4500 /* button_shot_nor@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A620214220E8007C4500 /* button_shot_nor@3x.png */; };
+		3CD7A645214220E9007C4500 /* icon_convert@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A621214220E8007C4500 /* icon_convert@3x.png */; };
+		3CD7A646214220E9007C4500 /* icon_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A622214220E8007C4500 /* icon_image@2x.png */; };
+		3CD7A647214220E9007C4500 /* icon_more@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A623214220E8007C4500 /* icon_more@3x.png */; };
+		3CD7A648214220E9007C4500 /* icon_face@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A624214220E8007C4500 /* icon_face@2x.png */; };
+		3CD7A649214220E9007C4500 /* icon_flashlight_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A625214220E8007C4500 /* icon_flashlight_off@2x.png */; };
+		3CD7A64A214220E9007C4500 /* button_shot_pre.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A626214220E8007C4500 /* button_shot_pre.png */; };
+		3CD7A64B214220E9007C4500 /* icon_convert.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A627214220E8007C4500 /* icon_convert.png */; };
+		3CD7A64C214220E9007C4500 /* icon_slider.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A628214220E8007C4500 /* icon_slider.png */; };
+		3CD7A64D214220E9007C4500 /* icon_set@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A629214220E8007C4500 /* icon_set@3x.png */; };
+		3CD7A64E214220E9007C4500 /* icon_flashlight_off@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A62A214220E8007C4500 /* icon_flashlight_off@3x.png */; };
+		3CD7A64F214220E9007C4500 /* Shape.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A62B214220E8007C4500 /* Shape.png */; };
+		3CD7A650214220E9007C4500 /* icon_flashlight_auto.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A62C214220E8007C4500 /* icon_flashlight_auto.png */; };
+		3CD7A651214220E9007C4500 /* button_shot_pre@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A62D214220E8007C4500 /* button_shot_pre@3x.png */; };
+		3CD7A652214220E9007C4500 /* icon_face.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A62E214220E8007C4500 /* icon_face.png */; };
+		3CD7A653214220E9007C4500 /* button_shot_pre@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A62F214220E8007C4500 /* button_shot_pre@2x.png */; };
+		3CD7A654214220E9007C4500 /* button_shot_nor.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A630214220E8007C4500 /* button_shot_nor.png */; };
+		3CD7A655214220E9007C4500 /* icon_flashlight_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A631214220E8007C4500 /* icon_flashlight_off.png */; };
+		3CD7A656214220E9007C4500 /* icon_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A632214220E8007C4500 /* icon_close@3x.png */; };
+		3CD7A657214220E9007C4500 /* icon_flashlight_auto@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A633214220E8007C4500 /* icon_flashlight_auto@3x.png */; };
+		3CD7A658214220E9007C4500 /* 前后摄像头转换.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A634214220E8007C4500 /* 前后摄像头转换.png */; };
+		3CD7A659214220E9007C4500 /* icon_flashlight_auto@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A635214220E8007C4500 /* icon_flashlight_auto@2x.png */; };
+		3CD7A65A214220E9007C4500 /* icon_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A636214220E8007C4500 /* icon_close@2x.png */; };
+		3CD7A65D21424E21007C4500 /* 滤镜.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A65B21424E20007C4500 /* 滤镜.png */; };
+		3CD7A65E21424E21007C4500 /* 绘制矩形.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A65C21424E20007C4500 /* 绘制矩形.png */; };
+		3CD7A66121424FCB007C4500 /* 画幅16_9.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A65F21424FCA007C4500 /* 画幅16_9.png */; };
+		3CD7A66221424FCB007C4500 /* 画幅1_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A66021424FCA007C4500 /* 画幅1_1.png */; };
+		3CD7A66521424FD8007C4500 /* 椭圆.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A66321424FD7007C4500 /* 椭圆.png */; };
+		3CD7A66621424FD8007C4500 /* 圆形.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD7A66421424FD7007C4500 /* 圆形.png */; };
+		3CD7A6692143B406007C4500 /* LXCameraCaptureButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7A6682143B406007C4500 /* LXCameraCaptureButton.m */; };
 		3CFC017C211B1012009128EC /* ZXPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFC017B211B1012009128EC /* ZXPlayViewController.m */; };
 		3CFC0189211DB30E009128EC /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFC0188211DB30E009128EC /* PlayerViewController.m */; };
+		3CFE3602213D627F004CC120 /* LXCameraMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFE3601213D627F004CC120 /* LXCameraMaskView.m */; };
+		3CFE3608213D6C29004CC120 /* LXCameraMaskSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFE3607213D6C29004CC120 /* LXCameraMaskSelectView.m */; };
+		3CFE360B213D6C3E004CC120 /* LXCameraMaskSelectViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFE360A213D6C3E004CC120 /* LXCameraMaskSelectViewCell.m */; };
+		3CFE360E213D6D5B004CC120 /* LXCameraMaskModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFE360D213D6D5B004CC120 /* LXCameraMaskModel.m */; };
 		AE37EE7210751AEECBC73E69 /* libPods-ZXDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1378736112C37D7D65478E /* libPods-ZXDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -81,11 +135,76 @@
 		3C100982212AE59700940BFD /* LXCameraManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXCameraManager.h; sourceTree = "<group>"; };
 		3C100987212AE68C00940BFD /* ZXCameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXCameraViewController.h; sourceTree = "<group>"; };
 		3C100988212AE68C00940BFD /* ZXCameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXCameraViewController.m; sourceTree = "<group>"; };
+		3C1631832137ED28006BC00C /* LXCameraFilterSelectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXCameraFilterSelectView.h; sourceTree = "<group>"; };
+		3C1631842137ED28006BC00C /* LXCameraFilterSelectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXCameraFilterSelectView.m; sourceTree = "<group>"; };
+		3C1631862137F0AE006BC00C /* LXCameraFilterModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXCameraFilterModel.h; sourceTree = "<group>"; };
+		3C1631872137F0AE006BC00C /* LXCameraFilterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXCameraFilterModel.m; sourceTree = "<group>"; };
+		3C1631892137F332006BC00C /* LXCameraFilterSelcectViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXCameraFilterSelcectViewCell.h; sourceTree = "<group>"; };
+		3C16318A2137F332006BC00C /* LXCameraFilterSelcectViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXCameraFilterSelcectViewCell.m; sourceTree = "<group>"; };
+		3C16318C21381DE7006BC00C /* logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo.jpg; sourceTree = "<group>"; };
 		3C7AAD1F21327D2100E2BDC7 /* LXCameraConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXCameraConfig.h; sourceTree = "<group>"; };
+		3CAD83BE214CF3C4004023E1 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		3CAD83BF214CF3C4004023E1 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		3CAD83C1214E4262004023E1 /* LXCalculagraphLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXCalculagraphLabel.h; sourceTree = "<group>"; };
+		3CAD83C2214E4262004023E1 /* LXCalculagraphLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXCalculagraphLabel.m; sourceTree = "<group>"; };
+		3CAD83FC2150FB54004023E1 /* ZXPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXPageViewController.h; sourceTree = "<group>"; };
+		3CAD83FD2150FB54004023E1 /* ZXPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXPageViewController.m; sourceTree = "<group>"; };
+		3CD7A613214220E8007C4500 /* icon_face@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_face@3x.png"; sourceTree = "<group>"; };
+		3CD7A614214220E8007C4500 /* icon_more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_more@2x.png"; sourceTree = "<group>"; };
+		3CD7A615214220E8007C4500 /* icon_image@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_image@3x.png"; sourceTree = "<group>"; };
+		3CD7A616214220E8007C4500 /* 前后摄像头转换-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "前后摄像头转换-2.png"; sourceTree = "<group>"; };
+		3CD7A617214220E8007C4500 /* icon_more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_more.png; sourceTree = "<group>"; };
+		3CD7A618214220E8007C4500 /* icon_convert@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_convert@2x.png"; sourceTree = "<group>"; };
+		3CD7A619214220E8007C4500 /* icon_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_close.png; sourceTree = "<group>"; };
+		3CD7A61A214220E8007C4500 /* button_shot_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_shot_nor@2x.png"; sourceTree = "<group>"; };
+		3CD7A61B214220E8007C4500 /* Shape@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shape@3x.png"; sourceTree = "<group>"; };
+		3CD7A61C214220E8007C4500 /* icon_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_image.png; sourceTree = "<group>"; };
+		3CD7A61D214220E8007C4500 /* icon_slider@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_slider@2x.png"; sourceTree = "<group>"; };
+		3CD7A61E214220E8007C4500 /* icon_slider@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_slider@3x.png"; sourceTree = "<group>"; };
+		3CD7A61F214220E8007C4500 /* Shape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shape@2x.png"; sourceTree = "<group>"; };
+		3CD7A620214220E8007C4500 /* button_shot_nor@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_shot_nor@3x.png"; sourceTree = "<group>"; };
+		3CD7A621214220E8007C4500 /* icon_convert@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_convert@3x.png"; sourceTree = "<group>"; };
+		3CD7A622214220E8007C4500 /* icon_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_image@2x.png"; sourceTree = "<group>"; };
+		3CD7A623214220E8007C4500 /* icon_more@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_more@3x.png"; sourceTree = "<group>"; };
+		3CD7A624214220E8007C4500 /* icon_face@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_face@2x.png"; sourceTree = "<group>"; };
+		3CD7A625214220E8007C4500 /* icon_flashlight_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_flashlight_off@2x.png"; sourceTree = "<group>"; };
+		3CD7A626214220E8007C4500 /* button_shot_pre.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_shot_pre.png; sourceTree = "<group>"; };
+		3CD7A627214220E8007C4500 /* icon_convert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_convert.png; sourceTree = "<group>"; };
+		3CD7A628214220E8007C4500 /* icon_slider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_slider.png; sourceTree = "<group>"; };
+		3CD7A629214220E8007C4500 /* icon_set@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_set@3x.png"; sourceTree = "<group>"; };
+		3CD7A62A214220E8007C4500 /* icon_flashlight_off@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_flashlight_off@3x.png"; sourceTree = "<group>"; };
+		3CD7A62B214220E8007C4500 /* Shape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Shape.png; sourceTree = "<group>"; };
+		3CD7A62C214220E8007C4500 /* icon_flashlight_auto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_flashlight_auto.png; sourceTree = "<group>"; };
+		3CD7A62D214220E8007C4500 /* button_shot_pre@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_shot_pre@3x.png"; sourceTree = "<group>"; };
+		3CD7A62E214220E8007C4500 /* icon_face.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_face.png; sourceTree = "<group>"; };
+		3CD7A62F214220E8007C4500 /* button_shot_pre@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_shot_pre@2x.png"; sourceTree = "<group>"; };
+		3CD7A630214220E8007C4500 /* button_shot_nor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_shot_nor.png; sourceTree = "<group>"; };
+		3CD7A631214220E8007C4500 /* icon_flashlight_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_flashlight_off.png; sourceTree = "<group>"; };
+		3CD7A632214220E8007C4500 /* icon_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_close@3x.png"; sourceTree = "<group>"; };
+		3CD7A633214220E8007C4500 /* icon_flashlight_auto@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_flashlight_auto@3x.png"; sourceTree = "<group>"; };
+		3CD7A634214220E8007C4500 /* 前后摄像头转换.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "前后摄像头转换.png"; sourceTree = "<group>"; };
+		3CD7A635214220E8007C4500 /* icon_flashlight_auto@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_flashlight_auto@2x.png"; sourceTree = "<group>"; };
+		3CD7A636214220E8007C4500 /* icon_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_close@2x.png"; sourceTree = "<group>"; };
+		3CD7A65B21424E20007C4500 /* 滤镜.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "滤镜.png"; sourceTree = "<group>"; };
+		3CD7A65C21424E20007C4500 /* 绘制矩形.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "绘制矩形.png"; sourceTree = "<group>"; };
+		3CD7A65F21424FCA007C4500 /* 画幅16_9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "画幅16_9.png"; sourceTree = "<group>"; };
+		3CD7A66021424FCA007C4500 /* 画幅1_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "画幅1_1.png"; sourceTree = "<group>"; };
+		3CD7A66321424FD7007C4500 /* 椭圆.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "椭圆.png"; sourceTree = "<group>"; };
+		3CD7A66421424FD7007C4500 /* 圆形.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "圆形.png"; sourceTree = "<group>"; };
+		3CD7A6672143B406007C4500 /* LXCameraCaptureButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXCameraCaptureButton.h; sourceTree = "<group>"; };
+		3CD7A6682143B406007C4500 /* LXCameraCaptureButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXCameraCaptureButton.m; sourceTree = "<group>"; };
 		3CFC017A211B1012009128EC /* ZXPlayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXPlayViewController.h; sourceTree = "<group>"; };
 		3CFC017B211B1012009128EC /* ZXPlayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXPlayViewController.m; sourceTree = "<group>"; };
 		3CFC0187211DB30E009128EC /* PlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
 		3CFC0188211DB30E009128EC /* PlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
+		3CFE3600213D627F004CC120 /* LXCameraMaskView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXCameraMaskView.h; sourceTree = "<group>"; };
+		3CFE3601213D627F004CC120 /* LXCameraMaskView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXCameraMaskView.m; sourceTree = "<group>"; };
+		3CFE3606213D6C29004CC120 /* LXCameraMaskSelectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXCameraMaskSelectView.h; sourceTree = "<group>"; };
+		3CFE3607213D6C29004CC120 /* LXCameraMaskSelectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXCameraMaskSelectView.m; sourceTree = "<group>"; };
+		3CFE3609213D6C3E004CC120 /* LXCameraMaskSelectViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXCameraMaskSelectViewCell.h; sourceTree = "<group>"; };
+		3CFE360A213D6C3E004CC120 /* LXCameraMaskSelectViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXCameraMaskSelectViewCell.m; sourceTree = "<group>"; };
+		3CFE360C213D6D5B004CC120 /* LXCameraMaskModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXCameraMaskModel.h; sourceTree = "<group>"; };
+		3CFE360D213D6D5B004CC120 /* LXCameraMaskModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXCameraMaskModel.m; sourceTree = "<group>"; };
 		D4BA2EB6E68D6493ABF51A32 /* Pods-ZXDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZXDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZXDemo/Pods-ZXDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		E0B526BE57E3AB3094B26054 /* Pods-ZXDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZXDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZXDemo/Pods-ZXDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -152,6 +271,7 @@
 		3C01F4A520F49A040082F7D6 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				3CAD83FA2150FB11004023E1 /* WMPageController */,
 				3C10097C212AE59700940BFD /* LXCameraController */,
 				3CFC0185211DB2B0009128EC /* ZFPlayer */,
 				3CFC0178211AFCA0009128EC /* DFPlay */,
@@ -204,6 +324,7 @@
 		3C01F4AA20F49A170082F7D6 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				3C16318C21381DE7006BC00C /* logo.jpg */,
 				3C01F4AB20F49A170082F7D6 /* LaunchScreen.storyboard */,
 				3C01F4AD20F49A170082F7D6 /* Main.storyboard */,
 				3C01F4AF20F49A170082F7D6 /* main.m */,
@@ -320,14 +441,24 @@
 		3C10097C212AE59700940BFD /* LXCameraController */ = {
 			isa = PBXGroup;
 			children = (
+				3CAD83BD214CF387004023E1 /* Category */,
+				3CD7A61021421D28007C4500 /* Resource */,
 				3C100986212AE65A00940BFD /* Controller */,
-				3C100981212AE59700940BFD /* LXCameraController.h */,
-				3C10097E212AE59700940BFD /* LXCameraController.m */,
+				3C1631892137F332006BC00C /* LXCameraFilterSelcectViewCell.h */,
+				3C16318A2137F332006BC00C /* LXCameraFilterSelcectViewCell.m */,
+				3C1631832137ED28006BC00C /* LXCameraFilterSelectView.h */,
+				3C1631842137ED28006BC00C /* LXCameraFilterSelectView.m */,
 				3C100982212AE59700940BFD /* LXCameraManager.h */,
 				3C10097F212AE59700940BFD /* LXCameraManager.m */,
+				3C100981212AE59700940BFD /* LXCameraController.h */,
+				3C10097E212AE59700940BFD /* LXCameraController.m */,
 				3C10097D212AE59700940BFD /* LXCameraControlView.h */,
 				3C100980212AE59700940BFD /* LXCameraControlView.m */,
 				3C7AAD1F21327D2100E2BDC7 /* LXCameraConfig.h */,
+				3C1631862137F0AE006BC00C /* LXCameraFilterModel.h */,
+				3C1631872137F0AE006BC00C /* LXCameraFilterModel.m */,
+				3CFE3600213D627F004CC120 /* LXCameraMaskView.h */,
+				3CFE3601213D627F004CC120 /* LXCameraMaskView.m */,
 			);
 			path = LXCameraController;
 			sourceTree = "<group>";
@@ -337,8 +468,101 @@
 			children = (
 				3C100987212AE68C00940BFD /* ZXCameraViewController.h */,
 				3C100988212AE68C00940BFD /* ZXCameraViewController.m */,
+				3CFE3606213D6C29004CC120 /* LXCameraMaskSelectView.h */,
+				3CFE3607213D6C29004CC120 /* LXCameraMaskSelectView.m */,
+				3CFE3609213D6C3E004CC120 /* LXCameraMaskSelectViewCell.h */,
+				3CFE360A213D6C3E004CC120 /* LXCameraMaskSelectViewCell.m */,
+				3CFE360C213D6D5B004CC120 /* LXCameraMaskModel.h */,
+				3CFE360D213D6D5B004CC120 /* LXCameraMaskModel.m */,
+				3CD7A6672143B406007C4500 /* LXCameraCaptureButton.h */,
+				3CD7A6682143B406007C4500 /* LXCameraCaptureButton.m */,
+				3CAD83C1214E4262004023E1 /* LXCalculagraphLabel.h */,
+				3CAD83C2214E4262004023E1 /* LXCalculagraphLabel.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		3CAD83BD214CF387004023E1 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				3CAD83BE214CF3C4004023E1 /* UIImage+Extension.h */,
+				3CAD83BF214CF3C4004023E1 /* UIImage+Extension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		3CAD83FA2150FB11004023E1 /* WMPageController */ = {
+			isa = PBXGroup;
+			children = (
+				3CAD83FB2150FB1A004023E1 /* Controlloer */,
+			);
+			path = WMPageController;
+			sourceTree = "<group>";
+		};
+		3CAD83FB2150FB1A004023E1 /* Controlloer */ = {
+			isa = PBXGroup;
+			children = (
+				3CAD83FC2150FB54004023E1 /* ZXPageViewController.h */,
+				3CAD83FD2150FB54004023E1 /* ZXPageViewController.m */,
+			);
+			path = Controlloer;
+			sourceTree = "<group>";
+		};
+		3CD7A61021421D28007C4500 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				3CD7A612214220E8007C4500 /* Image */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		3CD7A612214220E8007C4500 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				3CD7A613214220E8007C4500 /* icon_face@3x.png */,
+				3CD7A614214220E8007C4500 /* icon_more@2x.png */,
+				3CD7A615214220E8007C4500 /* icon_image@3x.png */,
+				3CD7A616214220E8007C4500 /* 前后摄像头转换-2.png */,
+				3CD7A617214220E8007C4500 /* icon_more.png */,
+				3CD7A618214220E8007C4500 /* icon_convert@2x.png */,
+				3CD7A619214220E8007C4500 /* icon_close.png */,
+				3CD7A61A214220E8007C4500 /* button_shot_nor@2x.png */,
+				3CD7A61B214220E8007C4500 /* Shape@3x.png */,
+				3CD7A61C214220E8007C4500 /* icon_image.png */,
+				3CD7A61D214220E8007C4500 /* icon_slider@2x.png */,
+				3CD7A61E214220E8007C4500 /* icon_slider@3x.png */,
+				3CD7A61F214220E8007C4500 /* Shape@2x.png */,
+				3CD7A620214220E8007C4500 /* button_shot_nor@3x.png */,
+				3CD7A621214220E8007C4500 /* icon_convert@3x.png */,
+				3CD7A622214220E8007C4500 /* icon_image@2x.png */,
+				3CD7A623214220E8007C4500 /* icon_more@3x.png */,
+				3CD7A624214220E8007C4500 /* icon_face@2x.png */,
+				3CD7A625214220E8007C4500 /* icon_flashlight_off@2x.png */,
+				3CD7A626214220E8007C4500 /* button_shot_pre.png */,
+				3CD7A627214220E8007C4500 /* icon_convert.png */,
+				3CD7A628214220E8007C4500 /* icon_slider.png */,
+				3CD7A629214220E8007C4500 /* icon_set@3x.png */,
+				3CD7A62A214220E8007C4500 /* icon_flashlight_off@3x.png */,
+				3CD7A62B214220E8007C4500 /* Shape.png */,
+				3CD7A62C214220E8007C4500 /* icon_flashlight_auto.png */,
+				3CD7A62D214220E8007C4500 /* button_shot_pre@3x.png */,
+				3CD7A62E214220E8007C4500 /* icon_face.png */,
+				3CD7A62F214220E8007C4500 /* button_shot_pre@2x.png */,
+				3CD7A630214220E8007C4500 /* button_shot_nor.png */,
+				3CD7A631214220E8007C4500 /* icon_flashlight_off.png */,
+				3CD7A632214220E8007C4500 /* icon_close@3x.png */,
+				3CD7A633214220E8007C4500 /* icon_flashlight_auto@3x.png */,
+				3CD7A634214220E8007C4500 /* 前后摄像头转换.png */,
+				3CD7A635214220E8007C4500 /* icon_flashlight_auto@2x.png */,
+				3CD7A636214220E8007C4500 /* icon_close@2x.png */,
+				3CD7A65C21424E20007C4500 /* 绘制矩形.png */,
+				3CD7A65B21424E20007C4500 /* 滤镜.png */,
+				3CD7A66021424FCA007C4500 /* 画幅1_1.png */,
+				3CD7A65F21424FCA007C4500 /* 画幅16_9.png */,
+				3CD7A66321424FD7007C4500 /* 椭圆.png */,
+				3CD7A66421424FD7007C4500 /* 圆形.png */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 		3CFC0178211AFCA0009128EC /* DFPlay */ = {
@@ -443,10 +667,53 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CD7A650214220E9007C4500 /* icon_flashlight_auto.png in Resources */,
+				3CD7A64B214220E9007C4500 /* icon_convert.png in Resources */,
+				3CD7A66221424FCB007C4500 /* 画幅1_1.png in Resources */,
 				3C01F4B220F49A170082F7D6 /* Main.storyboard in Resources */,
+				3CD7A65D21424E21007C4500 /* 滤镜.png in Resources */,
 				3C01F4B420F49A170082F7D6 /* Info.plist in Resources */,
+				3CD7A653214220E9007C4500 /* button_shot_pre@2x.png in Resources */,
+				3CD7A64C214220E9007C4500 /* icon_slider.png in Resources */,
+				3CD7A648214220E9007C4500 /* icon_face@2x.png in Resources */,
+				3CD7A644214220E9007C4500 /* button_shot_nor@3x.png in Resources */,
+				3CD7A639214220E9007C4500 /* icon_image@3x.png in Resources */,
 				3C01F4B120F49A170082F7D6 /* LaunchScreen.storyboard in Resources */,
+				3CD7A647214220E9007C4500 /* icon_more@3x.png in Resources */,
+				3CD7A66121424FCB007C4500 /* 画幅16_9.png in Resources */,
+				3CD7A638214220E9007C4500 /* icon_more@2x.png in Resources */,
+				3CD7A654214220E9007C4500 /* button_shot_nor.png in Resources */,
+				3CD7A65E21424E21007C4500 /* 绘制矩形.png in Resources */,
+				3CD7A637214220E9007C4500 /* icon_face@3x.png in Resources */,
+				3CD7A659214220E9007C4500 /* icon_flashlight_auto@2x.png in Resources */,
 				3C01F49520F4984C0082F7D6 /* Assets.xcassets in Resources */,
+				3CD7A64A214220E9007C4500 /* button_shot_pre.png in Resources */,
+				3CD7A64D214220E9007C4500 /* icon_set@3x.png in Resources */,
+				3CD7A656214220E9007C4500 /* icon_close@3x.png in Resources */,
+				3CD7A65A214220E9007C4500 /* icon_close@2x.png in Resources */,
+				3CD7A66521424FD8007C4500 /* 椭圆.png in Resources */,
+				3CD7A63F214220E9007C4500 /* Shape@3x.png in Resources */,
+				3CD7A655214220E9007C4500 /* icon_flashlight_off.png in Resources */,
+				3CD7A63C214220E9007C4500 /* icon_convert@2x.png in Resources */,
+				3C16318D21381DE8006BC00C /* logo.jpg in Resources */,
+				3CD7A641214220E9007C4500 /* icon_slider@2x.png in Resources */,
+				3CD7A651214220E9007C4500 /* button_shot_pre@3x.png in Resources */,
+				3CD7A63A214220E9007C4500 /* 前后摄像头转换-2.png in Resources */,
+				3CD7A649214220E9007C4500 /* icon_flashlight_off@2x.png in Resources */,
+				3CD7A643214220E9007C4500 /* Shape@2x.png in Resources */,
+				3CD7A658214220E9007C4500 /* 前后摄像头转换.png in Resources */,
+				3CD7A64E214220E9007C4500 /* icon_flashlight_off@3x.png in Resources */,
+				3CD7A66621424FD8007C4500 /* 圆形.png in Resources */,
+				3CD7A63B214220E9007C4500 /* icon_more.png in Resources */,
+				3CD7A652214220E9007C4500 /* icon_face.png in Resources */,
+				3CD7A640214220E9007C4500 /* icon_image.png in Resources */,
+				3CD7A63E214220E9007C4500 /* button_shot_nor@2x.png in Resources */,
+				3CD7A642214220E9007C4500 /* icon_slider@3x.png in Resources */,
+				3CD7A646214220E9007C4500 /* icon_image@2x.png in Resources */,
+				3CD7A645214220E9007C4500 /* icon_convert@3x.png in Resources */,
+				3CD7A63D214220E9007C4500 /* icon_close.png in Resources */,
+				3CD7A64F214220E9007C4500 /* Shape.png in Resources */,
+				3CD7A657214220E9007C4500 /* icon_flashlight_auto@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,24 +780,35 @@
 				3C01F4D220F4B4800082F7D6 /* ZXCustomTableViewController.m in Sources */,
 				3C01F4A420F499DC0082F7D6 /* AppDelegate.m in Sources */,
 				3C01F4B320F49A170082F7D6 /* main.m in Sources */,
+				3C16318B2137F332006BC00C /* LXCameraFilterSelcectViewCell.m in Sources */,
+				3CFE360B213D6C3E004CC120 /* LXCameraMaskSelectViewCell.m in Sources */,
 				3C01F4B920F49AED0082F7D6 /* ZXBasicViewController.m in Sources */,
 				3C01F4CB20F4AA010082F7D6 /* ZXItemModel.m in Sources */,
 				3C01F4C820F4A9E60082F7D6 /* ZXSectionModel.m in Sources */,
+				3CD7A6692143B406007C4500 /* LXCameraCaptureButton.m in Sources */,
+				3C1631882137F0AE006BC00C /* LXCameraFilterModel.m in Sources */,
 				3C100983212AE59700940BFD /* LXCameraController.m in Sources */,
 				3C01F4E220F5D9B80082F7D6 /* ZXOneViewController.m in Sources */,
 				3C01F4BC20F49B080082F7D6 /* ZXBasicTableViewController.m in Sources */,
 				3CFC017C211B1012009128EC /* ZXPlayViewController.m in Sources */,
 				3C01F4C520F49FBF0082F7D6 /* ZXHomeCollectionViewCell.m in Sources */,
+				3CAD83C0214CF3C4004023E1 /* UIImage+Extension.m in Sources */,
+				3C1631852137ED28006BC00C /* LXCameraFilterSelectView.m in Sources */,
 				3CFC0189211DB30E009128EC /* PlayerViewController.m in Sources */,
+				3CAD83C3214E4262004023E1 /* LXCalculagraphLabel.m in Sources */,
+				3CFE3608213D6C29004CC120 /* LXCameraMaskSelectView.m in Sources */,
 				3C01F4DC20F5CFCC0082F7D6 /* ZXBasicTabBarController.m in Sources */,
 				3C01F4BF20F49B340082F7D6 /* ZXBasicNavigationController.m in Sources */,
 				3C01F4E820F5E02C0082F7D6 /* ZXCustomTabBar.m in Sources */,
+				3CFE360E213D6D5B004CC120 /* LXCameraMaskModel.m in Sources */,
+				3CFE3602213D627F004CC120 /* LXCameraMaskView.m in Sources */,
 				3C01F4E520F5D9C30082F7D6 /* ZXTwoViewController.m in Sources */,
 				3C01F4C220F49BC60082F7D6 /* ZXHomeViewController.m in Sources */,
 				3C100985212AE59700940BFD /* LXCameraControlView.m in Sources */,
 				3C01F4D920F5CF880082F7D6 /* ZXCustomTaBarController.m in Sources */,
 				3C100984212AE59700940BFD /* LXCameraManager.m in Sources */,
 				3C100989212AE68C00940BFD /* ZXCameraViewController.m in Sources */,
+				3CAD83FE2150FB54004023E1 /* ZXPageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

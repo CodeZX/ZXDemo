@@ -84,7 +84,8 @@ static NSString  * const cellIdentifier = @"HomeCollectionViewCell";
         [[ZXItemModel alloc]initWithTitle:@"自定义TabarVC" TargetClase:@"ZXCustomTaBarController"],
         
         [[ZXItemModel alloc]initWithTitle:@"ZFPlayer" TargetClase:@"PlayerViewController"],
-        [[ZXItemModel alloc]initWithTitle:@"CameraController" TargetClase:@"ZXCameraViewController"]
+        [[ZXItemModel alloc]initWithTitle:@"CameraController" TargetClase:@"ZXCameraViewController"],
+        [[ZXItemModel alloc]initWithTitle:@"ZXPage" TargetClase:@"ZXPageViewController"]
                                                                                                       
       ]];
         

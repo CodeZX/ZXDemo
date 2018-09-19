@@ -15,8 +15,9 @@
 @class LXCameraManager,LXCameraControlView,LXCameraController;
 @protocol  LXCameraControllerDelegate <NSObject>
 @optional
-- (void)cameraController:(LXCameraController *)cameraController didCancel:(UIButton *)cancelBtn;
+- (void)cameraController:(LXCameraController *)cameraController didClose:(UIButton *)closeBtn;
 - (void)cameraController:(LXCameraController *)cameraController didSetting:(UIButton *)SettingBtn;
+- (void)cameraController:(LXCameraController *)cameraController didTapPreviewImageV:(UIImageView *)PreviewImageV;
 @required
 @end
 @interface LXCameraController : NSObject
@@ -32,11 +33,70 @@
 
 // 控制方法
 @interface LXCameraController (control)
-- (void)startCapture:(UIButton *)startCaptureBtn;
-- (void)stopCapture:(UIButton *)stopCaptureBtn;
-- (void)startCapture:(UIButton *)startCaptureBtn completionHandler:(void(^)(BOOL success,UIImage *image, NSError * error))completionHandler;
-- (void)stopCapture:(UIButton *)stopCaptureBtn completionHandler:(void(^)(BOOL success, UIImage *image,NSString *path, NSError *  error))completionHandler;
+
+/**
+ 关闭
+
+ @param closeBtn 关闭按钮
+ */
+- (void)closeCamera:(UIButton *)closeBtn;
+
+- (void)tapSetting:(UIButton *)settingBtn;
+
+- (void)tapPreview:(UIImageView *)previewImageV;
+/**
+ 开始捕获
+
+ @param
+ */
+- (void)startCapture;
+
+
+/**
+ 结束捕获
+ */
+- (void)stopCapture;
+
+
+
+/**
+ 转换拍摄模式
+
+ @param cameraType <#cameraType description#>
+ */
 - (void)transformCameraType:(LXCameraType)cameraType;
+
+
+/**
+ 设置滤镜
+
+ @param filter <#filter description#>
+ */
+- (void)setFilter:(GPUImageFilter *)filter;
+
+
+/**
+ 转换前后摄像头
+ */
+- (void)turnCameraPositionc;
+
+
+
+/**
+ 转换闪光灯模式
+ */
+- (void)turnFlashMode;
+
+
+/**
+ 设置焦距
+
+ @param scale <#scale description#>
+ */
+- (void)setFocalDistancesScale:(CGFloat )scale;
+
+
+
 @end
 
 

@@ -46,6 +46,8 @@
     self = [super init];
     if (self) {
         self.cameraType = LXCameraTypeDefault;
+        self.position = AVCaptureDevicePositionBack;
+        self.flashMode = AVCaptureFlashModeAuto;
     }
     return self;
 }
@@ -93,22 +95,90 @@
     
 }
 
+#pragma mark -------------------------- 操作方法 ----------------------------------------
 
-- (void)startCapture {
+
+
+/**
+图片捕获
+
+ @param completionHandler 完成回调
+ */
+
+- (void)startStillCaptureWithBezierPath:(UIBezierPath *)maskPath completionHandler:(void (^)(BOOL, UIImage *, NSError *))completionHandler {
     
     __weak typeof(self) weakSelf = self;
     if (self.cameraType == LXCameraTypeStillCamera) {
+        [self.stillCamera capturePhotoAsImageProcessedUpToFilter:self.defaultFilter withCompletionHandler:^(UIImage *processedImage, NSError *error) {
+            
             [self.stillCamera capturePhotoAsImageProcessedUpToFilter:self.defaultFilter withCompletionHandler:^(UIImage *processedImage, NSError *error) {
-        
-//                UIImageWriteToSavedPhotosAlbum(processedImage, self, @selector(image:didFinishSavingWithError:contextInfo:),(__bridge void *)self);
-                [weakSelf saveImage:processedImage];
-        
+                UIImage *clipImg = [UIImage clipedImageWithImage:processedImage path:maskPath];
+                if ([weakSelf saveImage:clipImg]) {
+                    completionHandler(YES,clipImg,nil);
+                }else {
+                    NSError *error = [[NSError alloc]initWithDomain:NSCocoaErrorDomain code:-101 userInfo:@{NSUnderlyingErrorKey:@"不能完成捕获!"}];
+                    completionHandler(NO,nil,error);
+                }
             }];
+            
+        }];
         
-    } else if(self.cameraType == LXCameraTypeVideoCamera) {
-        
-         [self.movieWriter startRecording];
     }
+    
+}
+- (void)startStillCaptureCompletionHandler:(void (^)(BOOL, UIImage *,UIBezierPath *, NSError *))completionHandler {
+   
+    
+    
+}
+
+
+/**
+ 开始视频捕获
+
+ @param completionHandler <#completionHandler description#>
+ */
+- (void)startVideoCaptureCompletionHandler:(void (^)(BOOL, NSError *))completionHandler {
+   
+    if(self.cameraType == LXCameraTypeVideoCamera) {
+        self.movieWriter = nil;
+        [self.movieWriter startRecording];
+        self.captureing = YES;
+        NSError *error = [[NSError alloc]initWithDomain:NSCocoaErrorDomain code:-101 userInfo:@{NSUnderlyingErrorKey:@"摄像模式，开始捕获..."}];
+        completionHandler(YES,error);
+        DEBUG_LOG(@"开始捕获视频");
+    }
+    
+}
+
+
+/**
+ 结束视频捕获
+
+ @param completionHandler <#completionHandler description#>
+ */
+- (void)stopVideoCaptureCompletionHandler:(void (^)(BOOL, UIImage *, NSError *))completionHandler {
+    
+    if (self.cameraType == LXCameraTypeVideoCamera) {
+        [self.defaultFilter removeTarget:self.movieWriter];
+        self.videoCamera.audioEncodingTarget = nil;
+        [self.movieWriter finishRecording];
+        self.captureing  = NO;
+        if (UIVideoAtPathIsCompatibleWithSavedPhotosAlbum(self.videoFile)) {
+            if ([self saveVideoWithPath:self.videoFile]) {
+                
+                completionHandler(YES,[self getThumbnailImage:self.videoFile],nil);
+                DEBUG_LOG(@"完成视频捕获");
+            } else {
+                NSError *error = [[NSError alloc]initWithDomain:NSCocoaErrorDomain code:-101 userInfo:@{NSUnderlyingErrorKey:@"不能完成捕获!"}];
+                completionHandler(NO,nil,error);
+                DEBUG_LOG(@"视频捕获完成失败");
+            }
+            
+        }
+    }
+   
+    
 }
 
 - (void)stopCapture {
@@ -144,7 +214,7 @@
     } else if(self.cameraType == LXCameraTypeVideoCamera) {
         self.movieWriter = nil;
         [self.movieWriter startRecording];
-        NSError *error = [[NSError alloc]initWithDomain:NSCocoaErrorDomain code:-101 userInfo:@{NSUnderlyingErrorKey:@"不能完成捕获!"}];
+        NSError *error = [[NSError alloc]initWithDomain:NSCocoaErrorDomain code:-101 userInfo:@{NSUnderlyingErrorKey:@"摄像模式，开始捕获..."}];
         completionHandler(NO,nil,error);
     }
 }
@@ -152,7 +222,7 @@
 - (void)stopCaptureCompletionHandler:(void (^)(BOOL, UIImage *, NSString *, NSError *))completionHandler {
     
     if (self.cameraType == LXCameraTypeStillCamera) {
-        NSError *error = [[NSError alloc]initWithDomain:NSCocoaErrorDomain code:-101 userInfo:@{NSUnderlyingErrorKey:@"拍照模式下，不需要结束捕获"}];
+        NSError *error = [[NSError alloc]initWithDomain:NSCocoaErrorDomain code:-101 userInfo:@{NSUnderlyingErrorKey:@"拍照模式下，结束捕获无效"}];
         completionHandler(NO,nil,nil,error);
         return;
     }
@@ -172,32 +242,103 @@
     
     
 }
-// 转换成图片拍摄
-- (void)transformStillCamera {
+
+- (void)setFilter:(GPUImageFilter *)filter completionHandler:(void (^)(BOOL, GPUImageFilter *, NSError *))completionHandler {
     
-//    [self.videoCamera stopCameraCapture];
-//    [self.videoCamera removeAllTargets];
-//    [self.defaultFilter removeAllTargets];
-//    [self.stillCamera addTarget:self.defaultFilter];
-//    [self.defaultFilter addTarget:self.previewView];
-//    [self.stillCamera startCameraCapture];
-    self.cameraType = LXCameraTypeStillCamera;
+    if (!filter) {
+        NSError *error = [NSError errorWithDomain:NSCocoaErrorDomain code:-101 userInfo:@{NSUnderlyingErrorKey:@"filter为空"}];
+        completionHandler(NO,nil,error);
+        return;
+    }
+    [self.stillCamera removeAllTargets];
+    [self.defaultFilter removeAllTargets];
+    [self.stillCamera addTarget:filter];
+    [filter addTarget:self.previewView];
+    completionHandler(YES,filter,nil);
 }
 
-// 转换成录像拍摄
-- (void)transformVideoCamera {
+- (void)turnCameraPosition:(AVCaptureDevicePosition)position completionHandler:(void (^)(BOOL, AVCaptureDevicePosition, NSError *))completionHandler {
+    if (position == AVCaptureDevicePositionUnspecified) {
+         NSError *error = [[NSError alloc]initWithDomain:NSCocoaErrorDomain code:-101 userInfo:@{NSUnderlyingErrorKey:@"position参数没有声明具体方向！"}];
+        completionHandler(NO,AVCaptureDevicePositionUnspecified,error);
+        return;
+    }
     
-//    [self.stillCamera stopCameraCapture];
-//    [self.stillCamera removeAllTargets];
-//    [self.defaultFilter removeAllTargets];
-//    [self.videoCamera addTarget:self.defaultFilter];
-//    [self.defaultFilter addTarget:self.previewView];
-//    [self.videoCamera startCameraCapture];
-    self.cameraType = LXCameraTypeVideoCamera;
-    
+    [self.stillCamera stopCameraCapture];
+    if ([self.stillCamera initWithSessionPreset:AVCaptureSessionPresetHigh cameraPosition:position]) {
+        self.position = position;
+        self.stillCamera.outputImageOrientation = UIInterfaceOrientationPortrait;
+        self.stillCamera.horizontallyMirrorFrontFacingCamera = YES;
+        self.stillCamera.horizontallyMirrorRearFacingCamera = NO;
+        
+        [self.stillCamera removeAllTargets];
+        [self.stillCamera addTarget:self.defaultFilter];
+        //    _filterView = (GPUImageView *)self.preview;
+        //        [self.defaultFilter addTarget:self.previewView];
+        [self.stillCamera startCameraCapture];
+        completionHandler(YES,position,nil);
+        
+    } else {
+        NSError *error = [NSError errorWithDomain:NSCocoaErrorDomain code:-101 userInfo:@{NSUnderlyingErrorKey:@"方向未知为空"}];
+        completionHandler(NO,AVCaptureDevicePositionUnspecified,error);
+        
+    }
     
 }
 
+
+
+
+- (void)turnFlashMode:(AVCaptureFlashMode)flashMode completionHandler:(void (^)(BOOL, AVCaptureFlashMode, NSError *))completionHandler {
+    
+  
+    [self.stillCamera.inputCamera lockForConfiguration:nil];
+    if ([self.stillCamera.inputCamera isFlashModeSupported:flashMode]) {
+        [self.stillCamera.inputCamera setFlashMode:AVCaptureFlashModeOn];
+        self.flashMode = flashMode;
+        completionHandler(YES,self.flashMode,nil);
+        
+    }else {
+        NSError *error = [NSError errorWithDomain:NSCocoaErrorDomain code:-101 userInfo:@{NSUnderlyingErrorKey:@"flashMode为不支持的闪光灯模式"}];
+        completionHandler(NO,flashMode,error);
+    }
+    [self.stillCamera.inputCamera unlockForConfiguration];
+}
+
+- (void)focalDistancesScale:(CGFloat)scale completionHandler:(void (^)(BOOL, CGFloat, NSError *))completionHandler {
+    
+    [CATransaction begin];
+    [CATransaction setAnimationDuration:.025];
+    NSError *error;
+    if([self.stillCamera.inputCamera lockForConfiguration:&error]){
+        [self.stillCamera.inputCamera setVideoZoomFactor:scale];
+        [self.stillCamera.inputCamera unlockForConfiguration];
+        completionHandler(YES,scale,nil);
+    }
+    else {
+         NSError *error = [NSError errorWithDomain:NSCocoaErrorDomain code:-101 userInfo:@{NSUnderlyingErrorKey:@"变焦失败"}];
+        completionHandler(NO,scale,error);
+    }
+    
+    [CATransaction commit];
+}
+
+
+
+// 转换拍摄模式 （录像和拍照）
+- (void)transformCameraType:(LXCameraType)cameraType completionHandler:(void (^)(BOOL, LXCameraType, NSError *))completionHandler {
+    
+    if (cameraType == LXCameraTypeUnknown) {
+         NSError *error = [[NSError alloc]initWithDomain:NSCocoaErrorDomain code:-101 userInfo:@{NSUnderlyingErrorKey:@"cameraType参数不能为LXCameraTypeUnknown，请重试！"}];
+        completionHandler(NO,LXCameraTypeUnknown,error);
+        return;
+    }
+    
+    self.cameraType = cameraType;
+    completionHandler(YES,self.cameraType,nil);
+    
+    
+}
 #pragma mark -------------------------- Save ImageAndvideo Means ----------------------------------------
 
 - (BOOL)saveImage:(UIImage *)image {
@@ -334,6 +475,28 @@
     }
     
     return nil;
+}
+
+- (UIImage *)getThumbnailImage:(NSString *)videoURL{
+    AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:[NSURL fileURLWithPath:videoURL] options:nil];
+    
+    AVAssetImageGenerator *gen = [[AVAssetImageGenerator alloc] initWithAsset:asset];
+    
+    gen.appliesPreferredTrackTransform = YES;//按正确方向对视频进行截图,关键点是将AVAssetImageGrnerator对象的appliesPreferredTrackTransform属性设置为YES。
+    
+    CMTime time = CMTimeMakeWithSeconds(5, 600);
+    
+    NSError *error = nil;
+    
+    CMTime actualTime;
+    
+    CGImageRef image = [gen copyCGImageAtTime:time actualTime:&actualTime error:&error];
+    
+    UIImage *thumb = [[UIImage alloc] initWithCGImage:image];
+    
+    CGImageRelease(image);
+    
+    return thumb;
 }
 
 

@@ -10,8 +10,20 @@
 
 
 @class LXCameraController;
+
+@protocol  LXCameraControlViewDelegate <NSObject>
+@optional
+@required
+@end
 @interface LXCameraControlView : UIView
 @property (nonatomic,weak) LXCameraController *cameraController;
-//- (instancetype)initWithCameraController:(LXCameraController *)cameraController;
+@property (nonatomic,strong,readonly) UIBezierPath *maskPath;  // 蒙版路径
 
+
+- (void)setPreviewImage:(UIImage *)PreviewImage;
+- (void)setCameraType:(LXCameraType)cameraType;
+- (void)setCameraPosition:(AVCaptureDevicePosition)position;
+- (void)setFlashMode:(AVCaptureFlashMode)flashMode;
+- (void)startVideoCapture;
+- (void)finishVideoCapture;
 @end

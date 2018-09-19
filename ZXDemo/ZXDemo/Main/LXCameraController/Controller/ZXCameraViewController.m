@@ -11,7 +11,7 @@
 #import "LXCameraManager.h"
 #import "LXCameraControlView.h"
 
-@interface ZXCameraViewController ()
+@interface ZXCameraViewController ()<LXCameraControllerDelegate>
 
 // 相机管理
 @property (nonatomic,strong) LXCameraManager *cameraManage;
@@ -33,23 +33,32 @@
     
     LXCameraManager *cameraManage = [[LXCameraManager alloc]init];
     LXCameraControlView *cameraControlView = [[LXCameraControlView alloc]initWithFrame:self.view.frame];
+    
     self.cameraConttroller = [LXCameraController cameraWithCameraManager:cameraManage  cameraControlView:cameraControlView containerView:self.view];
+    self.cameraConttroller.delegate = self;
    
     
 }
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+#pragma mark -------------------------- Delegate ----------------------------------------
+#pragma mark LXCameraControllerDelegate
+
+- (void)cameraController:(LXCameraController *)cameraController didClose:(UIButton *)closeBtn {
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)cameraController:(LXCameraController *)cameraController didSetting:(UIButton *)SettingBtn {
+    
+    UIViewController *VC = [[UIViewController alloc]init];
+    [self.navigationController pushViewController:VC animated:YES];
+    
 }
-*/
+
+- (void)cameraController:(LXCameraController *)cameraController didTapPreviewImageV:(UIImageView *)PreviewImageV {
+    
+    UIViewController *VC = [[UIViewController alloc]init];
+    [self.navigationController pushViewController:VC animated:YES];
+}
 
 @end

@@ -18,5 +18,19 @@ typedef NS_ENUM(NSUInteger, LXCameraType) {
 };
 
 
+typedef NS_ENUM(NSUInteger, LXCameraMaskType) {
+     LXCameraMaskTypeUnknown,
+    LXCameraMaskTypeDefault,
+     LXCameraMaskType1_1,
+    LXCameraMaskType4_3,
+    LXCameraMaskType16_9,
+    LXCameraMaskTypeRound,    // 圆形
+    LXCameraMaskTypeOval,    //  椭圆
+    LXCameraMaskTypeTriangle,    // 三角形
+    LXCameraMaskTypePentagon,   // 五角性
+    LXCameraMaskTypeHexagon,   // 六角形
+   
+};
+
 
 #endif /* LXCameraConfig_h */
